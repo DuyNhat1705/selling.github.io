@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Bytebox</title>
+<link rel="icon" href="isolated_icon.png" type="image/x-icon">
+<link rel="stylesheet" href="deco.css">
+<meta charset="utf-8">
+<meta name="Home description" content="Bán hàng online">
+<meta name="keyword" content="Đồ điện, Chuột, Máy giặt">
+<meta name="author" content="Duy Nhất">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .cart-button {
+      background-color: #ff8c00;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cart-button:hover {
+      background-color: #e07b00;
+    }
+
+    .cart-counter {
+      display: inline-block;
+      background-color: #ff3b3f;
+      color: #fff;
+      border-radius: 50%;
+      padding: 5px 10px;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+    
+    <div id="title1">
+        THẾ GIỚI ĐIỆN TỬ
+        <div id="subtitle1" title="Menu"> 🔈</div>
+        <div id="subtitle2" title="Tài khoản">🧑</div>
+        <div id="subtitle3" title="Giỏ hàng">🛒</div>
+    </div>
+    <div id="searchengine">
+    <form action="/search" method="GET" class="search-form">
+        <input type="text" name="query" placeholder="Tìm kiếm..." class="search-input">
+        <button type="submit" class="search-button">🔍</button>
+      </form>
+    </div>
+    <div id="shop">
+    <img src="Bàn phím.jpg" alt="Bàn phím Fuhlen" width="350px">
+        <div id="info">
+            <p>Bàn phím Fuhlen</p>
+            <p>Giá bán: 200.000</p>
+            <button class="cart-button" onclick="addToCart()">🛒 Thêm vào Giỏ hàng</button>
+            <span class="cart-counter" id="cartCounter">0</span>
+        </div>
+  
+    <script>
+      let cartCount = 0;
+  
+      function addToCart() {
+        cartCount++;
+        document.getElementById("cartCounter").textContent = cartCount;
+        alert("Sản phẩm đã được thêm vào giỏ hàng!");
+      }
+    </script>
+
+
+
+
+
+
+    <!-- <button onclick="changetext()">Add to cart</button>
+    <h1 id="h01">Giỏ hàng</h1>
+    <script>
+        changetext = () => { document.getElementById("h01").innerHTML = "2"; }
+    </script> -->
+
+</body>
+
+</html>
